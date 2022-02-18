@@ -13,11 +13,15 @@ body {
 
 .card {
     width: 300px;
-    height: 400px;
+    height: 360px;
     margin: 50px auto;
     position: relative;
     transform-style: preserve-3d;
-    transition: all 1s ease-in-out
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 .card:hover {transform: rotateY(180deg);}
@@ -31,13 +35,13 @@ body {
     background: #eee;
     border-radius: 10px;
     border: 1px solid #ccc;
-    text-align: center;
     color: #777;
 }
 
 .card .front {
     z-index: 1;
     backface-visibility: hidden;
+    text-align: center;
 }
 
 .card .front header {
@@ -60,19 +64,24 @@ body {
     -o-border-radius: 50%;
 }
 
-.card .front h3 {margin-bottom: 5px;}
+.card .front h3 {
+    margin-bottom: 5px;
+    color: #444;
+}
 
 .card .front p {
     margin: 0 auto;
     line-height: 1.7;
     width: 90%;
+    text-transform: capitalize;
 }
 
 .card .front span {
     display: inline-block;
-    margin-top: 5px;
-    color: #1812A9;
+    margin-top: 25px;
+    color: #0968B6;
     font-weight: bold;
+
 }
 
 .card .back {
@@ -85,4 +94,5 @@ body {
     list-style: none;
     padding: 0;
     line-height: 2;
+    margin: 20px 0 0 20px;
 }
